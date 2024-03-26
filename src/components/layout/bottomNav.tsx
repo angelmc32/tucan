@@ -9,8 +9,8 @@ const BottomNav = () => {
 
   return (
     <div className="w-full">
-      <nav className="pb-safe fixed bottom-0 w-full border-t bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="mx-auto flex h-16 max-w-md items-center justify-around px-6">
+      <nav className="pb-safe fixed bottom-0 flex w-full justify-center border-t bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="grid h-16 max-w-md grid-cols-3 gap-x-12 px-6 lg:gap-x-16">
           {links.map(({ href, label, icon }) => (
             <Link key={label} href={href}>
               <span
@@ -33,18 +33,18 @@ export default BottomNav
 
 const links = [
   {
-    label: 'My Profile',
-    href: '/dashboard',
+    label: 'cuenta',
+    href: '/cuenta',
     icon: <UserIcon className="h-5 w-5 text-indigo-600" />,
   },
   {
-    label: 'Embedded Wallet',
-    href: '/embedded-wallet',
+    label: 'cartera',
+    href: '/cartera',
     icon: <WalletIcon className="h-5 w-5 text-indigo-600" />,
   },
   {
-    label: 'Load Assets',
-    href: '/load-assets',
+    label: 'depositar',
+    href: '/depositar',
     icon: <CurrencyDollarIcon className="h-5 w-5 text-indigo-600" />,
   },
 ]

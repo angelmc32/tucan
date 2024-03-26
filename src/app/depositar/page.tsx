@@ -1,5 +1,6 @@
 'use client'
 
+import AuthenticatedPage from '@/components/layout/authenticatedPage'
 import { links } from '@/lib/links'
 import { usePrivy, useWallets } from '@privy-io/react-auth'
 import { useState } from 'react'
@@ -60,13 +61,12 @@ const LoadAssets = () => {
   }
 
   return (
-    <div className="page text-center">
-      <div className="md:max-w-sm">
-        <p className="text-md mt-2 font-bold uppercase text-gray-700">Fund your embedded wallet</p>
+    <AuthenticatedPage className="text-center">
+      <div className="max-w-xs md:max-w-sm">
+        <p className="text-md mt-2 font-bold text-gray-700">deposita fondos a tu cartera</p>
         <p className="mt-2 text-sm text-gray-600">
-          First, connect an external wallet to send assets to your embedded wallet. The wallet{' '}
-          <span className="font-bold">must</span> support the Base Sepolia network. We recommend
-          MetaMask.
+          conecta una cartera externa para enviar activos a tu cartera de aplicación. la cartera
+          externa debe tener soporte a la red de prueba Base Sepolia.
         </p>
         <p className="mt-2 text-sm text-gray-600"></p>
         <button
@@ -74,7 +74,7 @@ const LoadAssets = () => {
           className="mt-2 w-full rounded-md bg-indigo-600 py-2 text-sm font-semibold text-white shadow-sm disabled:bg-indigo-400"
           onClick={connectWallet}
         >
-          {!externalWallet ? 'Connect a wallet' : 'Connect another wallet?'}
+          {!externalWallet ? 'conectar cartera' : 'usar otra cartera'}
         </button>
         <textarea
           value={
@@ -86,19 +86,17 @@ const LoadAssets = () => {
           rows={9}
           readOnly
         />
-        <p className="mt-2 text-sm text-gray-600">
-          Next, add the Base Sepolia network to your wallet.
-        </p>
+        <p className="mt-2 text-sm text-gray-600">agrega la red Base Sepolia a tu cartera</p>
         <button
           type="button"
           className="mt-2 w-full rounded-md bg-indigo-600 py-2 text-sm font-semibold text-white shadow-sm disabled:bg-indigo-400"
           onClick={onAddNetwork}
           disabled={!externalWallet}
         >
-          Add Base Sepolia Network
+          agregar red Base Sepolia
         </button>
         <p className="mt-2 text-sm text-gray-600">
-          Lastly, click the button below to transfer 0.005 Sepolia ETH to your embedded wallet.
+          presiona el botón de abajo para depositar 0.005 Sepolia ETH a tu cartera de aplicación
         </p>
         <button
           type="button"
@@ -106,7 +104,7 @@ const LoadAssets = () => {
           onClick={onTransfer}
           disabled={!externalWallet || txIsLoading}
         >
-          Transfer 0.005 ETH
+          depositar 0.005 ETH
         </button>
         {txHash && (
           <p className="mt-2 text-sm italic text-gray-600">
@@ -123,7 +121,7 @@ const LoadAssets = () => {
           </p>
         )}
       </div>
-    </div>
+    </AuthenticatedPage>
   )
 }
 

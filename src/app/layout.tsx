@@ -26,7 +26,6 @@ export default function RootLayout({
         <WalletProvider>
           <Navbar />
           <main className={`overflow-x-hidden t-[${NAVBAR_HEIGHT}]`}>{children}</main>
-          <BottomNav />
         </WalletProvider>
       </body>
     </html>

@@ -22,7 +22,7 @@ export default function Navbar() {
         isNewUser,
         wasPreviouslyAuthenticated,
       })
-      router.push('/dashboard')
+      if (!wasPreviouslyAuthenticated) router.push('/cuenta')
     },
     // Set up an `onError` callback to run when there is a `login` error
     onError(error) {
