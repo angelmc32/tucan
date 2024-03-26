@@ -76,11 +76,14 @@
   }
 
   main {
-    @apply top-16 h-[calc(100svh-64px)];
+    @apply top-16 min-h-[calc(100svh-128px)];
   }
 
   div.page {
-    @apply flex h-full w-full flex-col items-center;
+    @apply flex h-full w-full flex-col items-center px-4 py-16 pb-4 md:px-8 md:pb-16 lg:px-12 xl:px-16;
+  }
+  div.auth-page {
+    @apply flex h-[calc(100svh-128px)] w-full flex-col items-center overflow-y-scroll px-4 pb-4 pt-8 md:px-8 md:pb-8 md:pt-16 lg:px-12 xl:px-16;
   }
 
   h1,
