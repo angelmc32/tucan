@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# tucan
 
-## Getting Started
+## community-built web app for builders and creators in latam
 
-First, run the development server:
+this project is a community-first application to provide latam builders and creators a space for collaboration and innovation thru the use of technology. a playground for decentralization and coordination.
+
+**hackea y aprende con amigos mientras construyes cosas divertidas**
+
+**hack and learn while with friends, while you build cool stuff**
+
+## tucan app - part of the kukulcán initiative
+
+### what is kukulcán?
+
+a cultural movement that provides digital and physical spaces for artists, creators, builders, hackers, and dreamers. inspired by the mayan god kukulcán, our vision is one of shared knowledge and social coordination for a better society. thru the use of technology, we will defy the status quo, the centralization and the barriers that we as humans have built thru history. we are the revolution.
+
+### how does the tucan app fit in kukulcán's vision
+
+the tucan web application plays a critical role in finding the next builders in the region, nurture them and help them become succesful builders who can act as leaders for the ecosystem
+
+## let's hack!
+
+#### requirements
+
+- nodejs v20.11.1 (lts) or latest
+- git
+- supabase or planetscale (for postgresql db) [supabase guide](https://supabase.com/docs/guides/database/connecting-to-postgres).
+
+### installation:
+
+clone this repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/angelmc32/tucan.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+change into project dir
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd tucan
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+install dependencies
 
-## Learn More
+```bash
+  bun install
+```
 
-To learn more about Next.js, take a look at the following resources:
+_we use bun for this project, you can get more info in [bun's official docs](https://bun.sh/docs/installation)_
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### env variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+create a copy of `.env.example` and name it `.env`
 
-## Deploy on Vercel
+modify the following env variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`DATABASE_URL`
+`NEXT_PUBLIC_PRIVY_APP_ID`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### start the app
+
+```bash
+  bun run dev
+```
+
+app will start at `http://localhost:3000`
+
+### db migration
+
+run the migration script
+
+```bash
+  npx prisma migrate dev
+```
+
+you can use prisma studio to explore the db
+
+```bash
+  npx prisma studio
+```
+
+prisma studio runs at `http://localhost:5050`.
+
+for db changes/updates, follow this flow
+
+1. modify the db schema, location `/prisma/schema.prisma`
+2. create migration
+3. keep working on the code
+4. rinse and repeat in case of another change to the db
+
+you can try out [this guide](https://www.prisma.io/docs/guides/migrate/developing-with-prisma-migrate) to learn more about the development flow when working with prisma
+
+## next steps
+
+this is a wip, you can always reach out at dev@frutero.club
