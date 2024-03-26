@@ -76,11 +76,11 @@
   }
 
   main {
-    @apply top-16 h-[calc(100svh-64px)];
+    @apply top-16 min-h-[calc(100svh-128px)];
   }
 
   div.page {
-    @apply flex h-full w-full flex-col items-center;
+    @apply flex h-full w-full flex-col items-center px-4 pb-4 pt-16 md:px-8 md:pb-28 lg:px-12 xl:px-16;
   }
 
   h1,

@@ -1,4 +1,4 @@
-# tucan
+# tucán
 
 ## community-built web app for builders and creators in latam
 
@@ -8,15 +8,15 @@ this project is a community-first application to provide latam builders and crea
 
 **hack and learn while with friends, while you build cool stuff**
 
-## tucan app - part of the kukulcán initiative
+## tucán app - part of the kukulcán initiative
 
 ### what is kukulcán?
 
 a cultural movement that provides digital and physical spaces for artists, creators, builders, hackers, and dreamers. inspired by the mayan god kukulcán, our vision is one of shared knowledge and social coordination for a better society. thru the use of technology, we will defy the status quo, the centralization and the barriers that we as humans have built thru history. we are the revolution.
 
-### how does the tucan app fit in kukulcán's vision
+### how does the tucán app fit in kukulcán's vision
 
-the tucan web application plays a critical role in finding the next builders in the region, nurture them and help them become succesful builders who can act as leaders for the ecosystem
+the tucán web application plays a critical role in finding the next builders in the region, nurture them and help them become succesful builders who can act as leaders for the ecosystem
 
 ## let's hack!
 
@@ -31,13 +31,13 @@ the tucan web application plays a critical role in finding the next builders in 
 clone this repo
 
 ```bash
-  git clone https://github.com/angelmc32/tucan.git
+  git clone https://github.com/angelmc32/tucán.git
 ```
 
 change into project dir
 
 ```bash
-  cd tucan
+  cd tucán
 ```
 
 install dependencies
