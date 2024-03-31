@@ -6,7 +6,7 @@ this project is a community-first application to provide latam builders and crea
 
 **hackea y aprende con amigos mientras construyes cosas divertidas**
 
-**hack and learn while with friends, while you build cool stuff**
+**hack and learn with friends, while you build cool stuff**
 
 ## tucán app - part of the kukulcán initiative
 
