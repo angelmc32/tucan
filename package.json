@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.11.0",
     "@privy-io/react-auth": "1.59.5",
     "@privy-io/wagmi": "^0.2.2",
     "@radix-ui/react-dialog": "^1.0.5",
